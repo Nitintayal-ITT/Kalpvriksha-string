@@ -36,9 +36,11 @@ void reverse_vowels(char *str) {
 }
 
 int main() {
-    char str[100];
+    char *str;
+    str = (char*)malloc(sizeof(char));
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
+    gets(str);
+    // fgets(str, sizeof(str), stdin);
     reverse_vowels(str);
     printf("The reversed vowel string: %s", str);
     return 0;
